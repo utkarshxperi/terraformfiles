@@ -7,12 +7,12 @@ provider "aws" {
 
 
 locals {
-  repo_name = "new-pass"
+  repo_name = "terraformscripts2"
 }
 
 resource "null_resource" "example" {
   provisioner "local-exec" {
-    command = "git clone https://github.com/utkarshxperi/${local.repo_name}.git"
+    command = "git clone git@github.com:utkarshxperi/${local.repo_name}.git"
   }
 }
 
